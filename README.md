@@ -3,7 +3,7 @@ its meeee
 
 hi im sophia 14yo trans
 
-founder of Learn Sci
+founder of Learn Science
 
 i fuck w chromebooks
 
@@ -17,8 +17,8 @@ my opinions on coding languages that i understand - not ordered
 - css: die die die die die die die die die die die die die die die die die die die die die die die die die die die i get its useful but it needs to die die die die die die
 
 things i make/made
-- learn sci: coming soon!
-- learn sci games: peak game site    https://sites.google.com/view/learn-sci
+- learn science: coming soon!
+- learn sci: peak game site    https://sites.google.com/view/learn-sci
 - Sign into your personal account on a school Chromebook (or maybe others) (requires another device): peak exploit totally not patched and outclassed - on TN
 - FUCK: an acual decent exploit i suppose - on TN
 
