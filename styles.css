@@ -57,7 +57,7 @@ body {
 }
 
 .top-nav ul li a {
-  color: #ffffff; /* White */
+  color: #000000; /* Black */
   text-decoration: none;
   font-size: 14px;
 }
@@ -121,13 +121,13 @@ p {
 }
 
 .social-icons a {
-  color: inherit;
+  color: #000000; /* Black */
   text-decoration: none;
 }
 
 .social-icons i {
   font-size: 30px;
-  color: #ffffff; /* White */
+  color: #000000; /* Black */
 }
 
 #snowflakes {
