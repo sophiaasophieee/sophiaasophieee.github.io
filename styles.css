@@ -1,6 +1,6 @@
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   margin: 0;
@@ -8,6 +8,32 @@ body {
   font-family: Arial, sans-serif;
   overflow: hidden;
   position: relative;
+}
+
+.top-nav {
+  width: 100%;
+  background-color: #333333; /* Same as profile box background */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Ensure it's above the snowflakes */
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav ul li {
+  margin: 0 15px;
+}
+
+.top-nav ul li a {
+  color: #ffffff; /* White */
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .profile-box {
@@ -18,6 +44,7 @@ body {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8); /* Floating shadow effect */
   position: relative;
   z-index: 1; /* Ensure it's above the snowflakes */
+  margin-top: 50px; /* Space below the nav bar */
 }
 
 .profile-box::before {
@@ -52,13 +79,13 @@ body {
 
 h1 {
   font-size: 24px;
-  color: #000000; /* White */
+  color: #000000; /* Black */
   margin: 0 0 10px;
 }
 
 p {
   font-size: 16px;
-  color: #000000; /* Light gray */
+  color: #000000; /* Black */
   margin: 0 0 20px;
 }
 
@@ -73,7 +100,7 @@ p {
   text-decoration: none;
 }
 
-social-icons i {
+.social-icons i {
   font-size: 30px;
   color: #ffffff; /* White */
 }
