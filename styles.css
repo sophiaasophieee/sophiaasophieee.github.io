@@ -172,7 +172,7 @@ p {
   border-radius: 50%;
   opacity: 0.8;
   pointer-events: none;
-  animation: fall linear infinite, rotate linear infinite;
+  animation: fall linear infinite;
 }
 
 .snowflake-image {
@@ -183,11 +183,5 @@ p {
 @keyframes fall {
   to {
     transform: translateY(100vh);
-  }
-}
-
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
   }
 }
