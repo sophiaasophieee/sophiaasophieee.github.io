@@ -1,6 +1,6 @@
 const background = document.getElementById('background');
 const particleCount = 100;
-const particleImage = 'your-particle-image.png';
+const particleImage = 'https://i.imgur.com/RDSMKvt.png';
 
 for (let i = 0; i < particleCount; i++) {
   const particle = document.createElement('img');
