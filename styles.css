@@ -54,12 +54,38 @@ body {
 
 .top-nav ul li {
   margin: 0 10px;
+  position: relative;
 }
 
 .top-nav ul li a {
   color: #000000;
   text-decoration: none;
   font-size: 14px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  min-width: 160px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #444444;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .profile-box {
@@ -146,11 +172,17 @@ p {
   border-radius: 50%;
   opacity: 0.8;
   pointer-events: none;
-  animation: fall linear infinite;
+  animation: fall linear infinite, rotate linear infinite;
 }
 
 @keyframes fall {
   to {
     transform: translateY(100vh);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
