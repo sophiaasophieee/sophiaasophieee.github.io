@@ -30,7 +30,7 @@ body {
   bottom: -7px;
   right: -7px;
   border-radius: 17px;
-  background: linear-gradient( 45deg,
+  background: linear-gradient(45deg,
     #5BCEFA 0%, 
     #5BCEFA 20%, 
     #F5A9B8 20%, 
@@ -40,7 +40,7 @@ body {
     #F5A9B8 60%, 
     #F5A9B8 80%, 
     #5BCEFA 80%, 
-    #5BCEFA 100% );
+    #5BCEFA 100%);
   z-index: -1;
   padding: 7px;
 }
@@ -105,7 +105,7 @@ body {
   bottom: -7px;
   right: -7px;
   border-radius: 17px;
-  background: linear-gradient( 45deg,
+  background: linear-gradient(45deg,
     #5BCEFA 0%, 
     #5BCEFA 20%, 
     #F5A9B8 20%, 
@@ -115,7 +115,7 @@ body {
     #F5A9B8 60%, 
     #F5A9B8 80%, 
     #5BCEFA 80%, 
-    #5BCEFA 100% );
+    #5BCEFA 100%);
   z-index: -1;
   padding: 7px;
 }
@@ -173,6 +173,11 @@ p {
   opacity: 0.8;
   pointer-events: none;
   animation: fall linear infinite, rotate linear infinite;
+}
+
+.snowflake-image {
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @keyframes fall {
