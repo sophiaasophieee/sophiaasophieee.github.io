@@ -29,7 +29,7 @@ body {
   bottom: -7px;
   right: -7px;
   border-radius: 17px; /* Border radius plus border width */
-  background: linear-gradient(45deg, red, yellow, green, cyan, blue);
+  background: linear-gradient(45deg, #5BCEFA, #F5A9B8, #FFFFFF, #F5A9B8, #5BCEFA);
   z-index: -1;
   padding: 7px; /* Adjusted for consistent border width */
 }
