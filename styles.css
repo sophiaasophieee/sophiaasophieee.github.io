@@ -11,17 +11,42 @@ body {
 }
 
 .top-nav {
-  width: 100%;
   background-color: #333333; /* Same as profile box background */
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8); /* Floating shadow effect */
+  position: absolute;
+  top: 20px;
+  right: 20px;
   z-index: 1; /* Ensure it's above the snowflakes */
+}
+
+.top-nav::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  bottom: -7px;
+  right: -7px;
+  border-radius: 17px; /* Border radius plus border width */
+  background: linear-gradient( 45deg,
+    #5BCEFA 0%, 
+    #5BCEFA 20%, 
+    #F5A9B8 20%, 
+    #F5A9B8 40%, 
+    #FFFFFF 40%, 
+    #FFFFFF 60%, 
+    #F5A9B8 60%, 
+    #F5A9B8 80%, 
+    #5BCEFA 80%, 
+    #5BCEFA 100% );
+  z-index: -1;
+  padding: 7px; /* Adjusted for consistent border width */
 }
 
 .top-nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
 }
