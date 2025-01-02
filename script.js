@@ -1,6 +1,10 @@
 $(document).ready(function() {
   var snowflakeCount = 100;
-  var snowflakeImage = 'https://i.imgur.com/RDSMKvt.png'; // Customize with your own image URL
+  var snowflakeImages = [
+    'https://i.imgur.com/RDSMKvt.png', // Image 1
+    'https://i.imgur.com/another-image.png', // Image 2
+    'https://i.imgur.com/yet-another-image.png' // Image 3
+  ];
 
   for (var i = 0; i < snowflakeCount; i++) {
     var isImageSnowflake = Math.random() < 0.5; // 50% chance to be an image snowflake
@@ -14,8 +18,9 @@ $(document).ready(function() {
     });
 
     if (isImageSnowflake) {
+      var randomImage = snowflakeImages[Math.floor(Math.random() * snowflakeImages.length)];
       snowflake.addClass('snowflake-image').css({
-        backgroundImage: 'url(' + snowflakeImage + ')'
+        backgroundImage: 'url(' + randomImage + ')'
       });
     }
 
