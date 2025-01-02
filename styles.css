@@ -18,9 +18,20 @@ body {
   border-radius: 10px; /* Updated rounded border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   position: relative;
-  border: 7px solid;
   background-clip: padding-box;
-  border-image: linear-gradient(45deg, red, yellow, green, cyan, blue) 1;
+}
+
+.profile-box::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  bottom: -7px;
+  right: -7px;
+  border-radius: 17px; /* Border radius plus border width */
+  border: 7px solid transparent;
+  background: linear-gradient(45deg, red, yellow, green, cyan, blue);
+  z-index: -1;
 }
 
 .profile-picture {
@@ -81,22 +92,4 @@ p {
   to {
     transform: translateY(100vh);
   }
-}
-
-/* New CSS for rounded border corners */
-.profile-box::after {
-  content: "";
-  position: absolute;
-  top: -7px;
-  left: -7px;
-  right: -7px;
-  bottom: -7px;
-  border-radius: 10px; /* Same rounded border radius */
-  border: 7px solid transparent;
-  background: linear-gradient(45deg, red, yellow, green, cyan, blue);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-          mask-composite: exclude;
 }
