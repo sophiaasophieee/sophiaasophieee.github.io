@@ -6,6 +6,8 @@ body {
   margin: 0;
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
 }
 
 .profile-box {
@@ -13,7 +15,7 @@ body {
   padding: 20px;
   text-align: center;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 10px; /* Updated rounded border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   border: 7px solid;
@@ -54,4 +56,29 @@ p {
 .social-icons i {
   font-size: 30px;
   color: #333333;
+}
+
+#snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
 }
