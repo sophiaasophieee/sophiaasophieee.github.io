@@ -4,20 +4,21 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a; /* Very dark gray */
   font-family: Arial, sans-serif;
   overflow: hidden;
   position: relative;
 }
+
 .profile-box {
   width: 300px;
   padding: 20px;
   text-align: center;
-  background-color: #333333;
+  background-color: #333333; /* Solid dark gray background */
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* Floating shadow effect */
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Ensure it's above the snowflakes */
 }
 
 .profile-box::before {
@@ -27,7 +28,7 @@ body {
   left: -7px;
   bottom: -7px;
   right: -7px;
-  border-radius: 17px;
+  border-radius: 17px; /* Border radius plus border width */
   background: linear-gradient( 45deg,
     #5BCEFA 0%, 
     #5BCEFA 20%, 
@@ -40,7 +41,7 @@ body {
     #5BCEFA 80%, 
     #5BCEFA 100% );
   z-index: -1;
-  padding: 7px;
+  padding: 7px; /* Adjusted for consistent border width */
 }
 
 .profile-picture {
@@ -52,13 +53,13 @@ body {
 
 h1 {
   font-size: 24px;
-  color: #000000;
+  color: #ffffff; /* White */
   margin: 0 0 10px;
 }
 
 p {
   font-size: 16px;
-  color: #000000;
+  color: #cccccc; /* Light gray */
   margin: 0 0 20px;
 }
 
@@ -73,9 +74,9 @@ p {
   text-decoration: none;
 }
 
-.social-icons i {
+social-icons i {
   font-size: 30px;
-  color: #000000; /* White */
+  color: #ffffff; /* White */
 }
 
 #snowflakes {
