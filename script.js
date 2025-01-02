@@ -2,13 +2,12 @@ $(document).ready(function() {
   var snowflakeCount = 100;
   var snowflakeImages = [
     'https://i.imgur.com/RDSMKvt.png', // Image 1
-    'https://i.imgur.com/another-image.png', // Image 2
-    'https://i.imgur.com/yet-another-image.png' // Image 3
+    'https://media.tenor.com/aW_E-EO9smoAAAAM/halloween-happy.gif', // GIF 1
   ];
 
   for (var i = 0; i < snowflakeCount; i++) {
     var isImageSnowflake = Math.random() < 0.5; // 50% chance to be an image snowflake
-    var size = Math.random() * 30 + 20; // Size between 20px and 50px
+    var size = Math.random() * 10 + 5; // Size between 20px and 50px
     var snowflake = $('<div class="snowflake"></div>').css({
       left: Math.random() * 100 + 'vw',
       width: size + 'px',
