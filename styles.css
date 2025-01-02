@@ -175,13 +175,13 @@ p {
   animation: fall linear infinite;
 }
 
+@keyframes fall {
+  to {
+    transform: translateY(calc(100vh + 20px));
+  }
+}
+
 .snowflake-image {
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-  }
 }
