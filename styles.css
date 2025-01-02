@@ -101,26 +101,7 @@ body {
   display: block;
 }
 
-
-/*profile*/
-
-.inner-box {
-  padding:20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  z-index: 1;
-}
-
-.inner-box::before {
-  content: "";
-  position: absolute;
-  border-radius: 10px;
-  background-color: #ffffff;
-  z-index: -1;
-}
-
 .profile-box {
-  align-content: center;
   padding: 20px;
   text-align: center;
   background-color: #333333;
@@ -130,7 +111,6 @@ body {
 }
 
 .profile-box::before {
-  align-content: center;
   content: "";
   position: absolute;
   top: -7px;
