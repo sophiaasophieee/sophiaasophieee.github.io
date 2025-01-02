@@ -67,16 +67,16 @@ body {
   display: none;
   position: absolute;
   background: linear-gradient(45deg,
-    #5BCEFA 0%, 
-    #5BCEFA 20%, 
-    #F5A9B8 20%, 
-    #F5A9B8 40%, 
-    #FFFFFF 40%, 
-    #FFFFFF 60%, 
-    #F5A9B8 60%, 
-    #F5A9B8 80%, 
-    #5BCEFA 80%, 
-    #5BCEFA 100%);
+  #5BCEFA 0%, 
+  #5BCEFA 20%, 
+  #F5A9B8 20%, 
+  #F5A9B8 40%, 
+  #FFFFFF 40%, 
+  #FFFFFF 60%, 
+  #F5A9B8 60%, 
+  #F5A9B8 80%, 
+  #5BCEFA 80%, 
+  #5BCEFA 100%);
   min-width: 160px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
   z-index: 1;
@@ -92,6 +92,10 @@ body {
 
 .dropdown-content a:hover {
   background-color: #5BCEFA;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .profile-box {
