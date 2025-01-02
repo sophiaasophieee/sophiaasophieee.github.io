@@ -4,7 +4,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
+  background-color: #1a1a1a; /* Very dark gray */
   font-family: Arial, sans-serif;
   overflow: hidden;
   position: relative;
@@ -14,9 +14,9 @@ body {
   width: 300px;
   padding: 20px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #333333; /* Dark gray */
   border-radius: 10px; /* Updated rounded border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   position: relative;
   border: 7px solid;
   background-clip: padding-box;
@@ -32,13 +32,13 @@ body {
 
 h1 {
   font-size: 24px;
-  color: #333333;
+  color: #ffffff; /* White */
   margin: 0 0 10px;
 }
 
 p {
   font-size: 16px;
-  color: #666666;
+  color: #cccccc; /* Light gray */
   margin: 0 0 20px;
 }
 
@@ -55,7 +55,7 @@ p {
 
 .social-icons i {
   font-size: 30px;
-  color: #333333;
+  color: #ffffff; /* White */
 }
 
 #snowflakes {
@@ -81,4 +81,22 @@ p {
   to {
     transform: translateY(100vh);
   }
+}
+
+/* New CSS for rounded border corners */
+.profile-box::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  right: -7px;
+  bottom: -7px;
+  border-radius: 10px; /* Same rounded border radius */
+  border: 7px solid transparent;
+  background: linear-gradient(45deg, red, yellow, green, cyan, blue);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
 }
