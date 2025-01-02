@@ -28,10 +28,20 @@ body {
   left: -7px;
   bottom: -7px;
   right: -7px;
-  border-radius: 17px; /* Border radius plus border width */
-  background: linear-gradient(45deg, #5BCEFA, #F5A9B8, #FFFFFF, #F5A9B8, #5BCEFA);
+  border-radius: 17px;
+  background: linear-gradient( 45deg,
+    #5BCEFA 0%, 
+    #5BCEFA 20%, 
+    #F5A9B8 20%, 
+    #F5A9B8 40%, 
+    #FFFFFF 40%, 
+    #FFFFFF 60%, 
+    #F5A9B8 60%, 
+    #F5A9B8 80%, 
+    #5BCEFA 80%, 
+    #5BCEFA 100% );
   z-index: -1;
-  padding: 7px; /* Adjusted for consistent border width */
+  padding: 7px;
 }
 
 .profile-picture {
