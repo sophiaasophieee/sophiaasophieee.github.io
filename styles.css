@@ -2,6 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   margin: 0;
   background-color: #1a1a1a; /* Very dark gray */
@@ -12,9 +13,9 @@ body {
 
 .top-nav {
   background-color: #333333; /* Same as profile box background */
-  padding: 10px 20px;
+  padding: 5px 10px; /* Thinner padding */
   border-radius: 10px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8); /* Floating shadow effect */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7); /* Floating shadow effect */
   position: absolute;
   top: 20px;
   right: 20px;
@@ -52,13 +53,13 @@ body {
 }
 
 .top-nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .top-nav ul li a {
   color: #ffffff; /* White */
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .profile-box {
@@ -69,7 +70,6 @@ body {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8); /* Floating shadow effect */
   position: relative;
   z-index: 1; /* Ensure it's above the snowflakes */
-  margin-top: 50px; /* Space below the nav bar */
 }
 
 .profile-box::before {
