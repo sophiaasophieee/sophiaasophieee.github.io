@@ -6,7 +6,8 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #1a1a1a; /* Very dark gray */
-  font-family: Arial, sans-serif;
+  font-family: 'Raleway', sans-serif; /* Raleway font */
+  font-weight: 700; /* Bold text */
   overflow: hidden;
   position: relative;
 }
