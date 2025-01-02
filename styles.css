@@ -5,22 +5,21 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #1a1a1a; /* Very dark gray */
-  font-family: 'Raleway', sans-serif; /* Raleway font */
-  font-weight: 700; /* Bold text */
+  background-color: #1a1a1a;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   overflow: hidden;
   position: relative;
 }
 
 .top-nav {
-  background-color: #333333; /* Same as profile box background */
-  padding: 5px 10px; /* Thinner padding */
+  background-color: #333333;
+  padding: 5px 10px;
   border-radius: 10px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7); /* Floating shadow effect */
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 1; /* Ensure it's above the snowflakes */
+  z-index: 1;
 }
 
 .top-nav::before {
@@ -30,7 +29,7 @@ body {
   left: -7px;
   bottom: -7px;
   right: -7px;
-  border-radius: 17px; /* Border radius plus border width */
+  border-radius: 17px;
   background: linear-gradient( 45deg,
     #5BCEFA 0%, 
     #5BCEFA 20%, 
@@ -43,7 +42,7 @@ body {
     #5BCEFA 80%, 
     #5BCEFA 100% );
   z-index: -1;
-  padding: 7px; /* Adjusted for consistent border width */
+  padding: 7px;
 }
 
 .top-nav ul {
@@ -58,7 +57,7 @@ body {
 }
 
 .top-nav ul li a {
-  color: #000000; /* Black */
+  color: #000000;
   text-decoration: none;
   font-size: 14px;
 }
@@ -66,11 +65,10 @@ body {
 .profile-box {
   padding: 20px;
   text-align: center;
-  background-color: #333333; /* Solid dark gray background */
+  background-color: #333333;
   border-radius: 10px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8); /* Floating shadow effect */
   position: relative;
-  z-index: 1; /* Ensure it's above the snowflakes */
+  z-index: 1;
 }
 
 .profile-box::before {
@@ -80,7 +78,7 @@ body {
   left: -7px;
   bottom: -7px;
   right: -7px;
-  border-radius: 17px; /* Border radius plus border width */
+  border-radius: 17px;
   background: linear-gradient( 45deg,
     #5BCEFA 0%, 
     #5BCEFA 20%, 
@@ -93,7 +91,7 @@ body {
     #5BCEFA 80%, 
     #5BCEFA 100% );
   z-index: -1;
-  padding: 7px; /* Adjusted for consistent border width */
+  padding: 7px;
 }
 
 .profile-picture {
@@ -105,13 +103,13 @@ body {
 
 h1 {
   font-size: 24px;
-  color: #000000; /* Black */
+  color: #000000;
   margin: 0 0 10px;
 }
 
 p {
   font-size: 16px;
-  color: #000000; /* Black */
+  color: #000000;
   margin: 0 0 20px;
 }
 
@@ -122,13 +120,13 @@ p {
 }
 
 .social-icons a {
-  color: #000000; /* Black */
+  color: #000000;
   text-decoration: none;
 }
 
 .social-icons i {
   font-size: 30px;
-  color: #000000; /* Black */
+  color: #000000;
 }
 
 #snowflakes {
@@ -138,7 +136,7 @@ p {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0; /* Place snowflakes behind the box */
+  z-index: 0;
 }
 
 .snowflake {
