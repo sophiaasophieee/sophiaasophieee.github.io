@@ -185,3 +185,13 @@ p {
     transform: translateY(100vh);
   }
 }
+
+.profile-box p:hover {
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-box h1:hover {
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
