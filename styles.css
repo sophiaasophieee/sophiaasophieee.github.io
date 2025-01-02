@@ -9,39 +9,6 @@ body {
   overflow: hidden;
   position: relative;
 }
-.outer-box {
-  width: 300px;
-  padding: 20px;
-  text-align: center;
-  background-color: #333333;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  position: relative;
-  z-index: 1;
-}
-
-.outer-box::before {
-  content: "";
-  position: absolute;
-  top: -14px;
-  left: -14px;
-  bottom: -14px;
-  right: -14px;
-  border-radius: 24px;
-  background: linear-gradient( 45deg,
-    #5BCEFA 0%, 
-    #5BCEFA 20%, 
-    #F5A9B8 20%, 
-    #F5A9B8 40%, 
-    #FFFFFF 40%, 
-    #FFFFFF 60%, 
-    #F5A9B8 60%, 
-    #F5A9B8 80%, 
-    #5BCEFA 80%, 
-    #5BCEFA 100% );
-  z-index: -1;
-  padding: 14px;
-}
 .profile-box {
   width: 300px;
   padding: 20px;
@@ -61,7 +28,17 @@ body {
   bottom: -7px;
   right: -7px;
   border-radius: 17px;
-  background: #1a1a1a;
+  background: linear-gradient( 45deg,
+    #5BCEFA 0%, 
+    #5BCEFA 20%, 
+    #F5A9B8 20%, 
+    #F5A9B8 40%, 
+    #FFFFFF 40%, 
+    #FFFFFF 60%, 
+    #F5A9B8 60%, 
+    #F5A9B8 80%, 
+    #5BCEFA 80%, 
+    #5BCEFA 100% );
   z-index: -1;
   padding: 7px;
 }
