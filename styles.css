@@ -13,7 +13,6 @@ body {
 }
 
 .top-nav {
-  background-color: #333333;
   padding: 5px 10px;
   border-radius: 10px;
   position: absolute;
@@ -25,11 +24,11 @@ body {
 .top-nav::before {
   content: "";
   position: absolute;
-  top: -7px;
-  left: -7px;
-  bottom: -7px;
-  right: -7px;
-  border-radius: 17px;
+  top: -0px;
+  left: -0px;
+  bottom: -0px;
+  right: -0px;
+  border-radius: 10px;
   background: linear-gradient(45deg,
     #5BCEFA 0%, 
     #5BCEFA 20%, 
@@ -42,7 +41,13 @@ body {
     #5BCEFA 80%, 
     #5BCEFA 100%);
   z-index: -1;
-  padding: 7px;
+  padding: 0px;
+}
+
+.inner-nav {
+  padding: 5px;
+  background-color: #333333;
+  border-radius: 10px;
 }
 
 .top-nav ul {
@@ -66,22 +71,39 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background: linear-gradient(45deg,
-  #5BCEFA 0%, 
-  #5BCEFA 20%, 
-  #F5A9B8 20%, 
-  #F5A9B8 40%, 
-  #FFFFFF 40%, 
-  #FFFFFF 60%, 
-  #F5A9B8 60%, 
-  #F5A9B8 80%, 
-  #5BCEFA 80%, 
-  #5BCEFA 100%);
   min-width: 160px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
   z-index: 1;
-  border-radius: 10px;
   right: 0;
+  border-radius: 10px;
+}
+
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -0px;
+  left: -0px;
+  bottom: -0px;
+  right: -0px;
+  border-radius: 10px;
+  background: linear-gradient(45deg,
+    #5BCEFA 0%, 
+    #5BCEFA 20%, 
+    #F5A9B8 20%, 
+    #F5A9B8 40%, 
+    #FFFFFF 40%, 
+    #FFFFFF 60%, 
+    #F5A9B8 60%, 
+    #F5A9B8 80%, 
+    #5BCEFA 80%, 
+    #5BCEFA 100%);
+  z-index: -1;
+  padding: 0px;
+}
+
+.dropdown-inner {
+  background-color: #333333;
+  border-radius: 10px;
 }
 
 .dropdown-content a {
@@ -130,12 +152,12 @@ body {
     #5BCEFA 80%, 
     #5BCEFA 100%);
   z-index: -1;
-  padding: 7px;
+  padding: 0px;
 }
 
 .inner-box {
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #444444;
   border-radius: 10px;
 }
 
