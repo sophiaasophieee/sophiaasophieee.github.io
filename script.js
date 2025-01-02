@@ -10,6 +10,7 @@ $(document).ready(function() {
     var size = Math.random() * 25 + 5; // Size between 20px and 50px
     var snowflake = $('<div class="snowflake"></div>').css({
       left: Math.random() * 100 + 'vw',
+      top: -100 + 'vh',
       width: size + 'px',
       height: size + 'px',
       animationDuration: Math.random() * 3 + 2 + 's',
