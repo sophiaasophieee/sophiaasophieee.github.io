@@ -31,14 +31,14 @@ body {
   border-radius: 17px;
   background: linear-gradient( 45deg,
     #5BCEFA 0%, 
-    #5BCEFA 22%, 
-    #F5A9B8 22%, 
-    #F5A9B8 48%, 
-    #FFFFFF 48%, 
-    #FFFFFF 52%, 
-    #F5A9B8 52%, 
-    #F5A9B8 78%, 
-    #5BCEFA 78%, 
+    #5BCEFA 20%, 
+    #F5A9B8 20%, 
+    #F5A9B8 40%, 
+    #FFFFFF 40%, 
+    #FFFFFF 60%, 
+    #F5A9B8 60%, 
+    #F5A9B8 80%, 
+    #5BCEFA 80%, 
     #5BCEFA 100% );
   z-index: -1;
   padding: 7px;
