@@ -46,7 +46,7 @@ body {
 
 .inner-nav {
   padding: 5px;
-  background-color: #333333;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
@@ -86,23 +86,13 @@ body {
   bottom: -0px;
   right: -0px;
   border-radius: 10px;
-  background: linear-gradient(45deg,
-    #5BCEFA 0%, 
-    #5BCEFA 20%, 
-    #F5A9B8 20%, 
-    #F5A9B8 40%, 
-    #FFFFFF 40%, 
-    #FFFFFF 60%, 
-    #F5A9B8 60%, 
-    #F5A9B8 80%, 
-    #5BCEFA 80%, 
-    #5BCEFA 100%);
+  background-color: #ffffff;
   z-index: -1;
   padding: 0px;
 }
 
 .dropdown-inner {
-  background-color: #333333;
+  background-color: #fffff;
   border-radius: 10px;
 }
 
@@ -115,7 +105,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #5BCEFA;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
@@ -126,7 +116,7 @@ body {
 .profile-box {
   padding: 20px;
   text-align: center;
-  background-color: #333333;
+  background-color: #ffffff;
   border-radius: 10px;
   position: relative;
   z-index: 1;
@@ -157,7 +147,7 @@ body {
 
 .inner-box {
   padding: 20px;
-  background-color: #444444;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
