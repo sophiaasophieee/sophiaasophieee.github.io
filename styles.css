@@ -113,11 +113,11 @@ body {
 .profile-box::before {
   content: "";
   position: absolute;
-  top: -7px;
-  left: -7px;
-  bottom: -7px;
-  right: -7px;
-  border-radius: 17px;
+  top: -0px;
+  left: -0px;
+  bottom: -0px;
+  right: -0px;
+  border-radius: 10px;
   background: linear-gradient(45deg,
     #5BCEFA 0%, 
     #5BCEFA 20%, 
