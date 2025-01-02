@@ -7,9 +7,10 @@ $(document).ready(function() {
 
   for (var i = 0; i < snowflakeCount; i++) {
     var isImageSnowflake = Math.random() < 0.5; // 50% chance to be an image snowflake
-    var size = Math.random() * 10 + 5; // Size between 20px and 50px
+    var size = Math.random() * 25 + 5; // Size between 20px and 50px
     var snowflake = $('<div class="snowflake"></div>').css({
       left: Math.random() * 100 + 'vw',
+      top: '-' + (Math.random() * 20 + 10) + 'px',
       width: size + 'px',
       height: size + 'px',
       animationDuration: Math.random() * 3 + 2 + 's',
