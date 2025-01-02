@@ -1,0 +1,16 @@
+header{    
+    background-size: cover;
+    opacity:.5;
+    height:250px;
+    padding:100px;
+}
+
+body{
+    background-color:#ff0000;
+}
+
+.img-thumbnail{
+    background-color:#d0e5e6;
+    height:250px;
+    width:250px;
+}
