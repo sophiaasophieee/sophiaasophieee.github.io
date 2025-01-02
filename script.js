@@ -1,16 +1,16 @@
 $(document).ready(function() {
   var snowflakeCount = 100;
   var snowflakeImages = [
-    'https://i.imgur.com/RDSMKvt.png', // Image 1
-    'https://media.tenor.com/aW_E-EO9smoAAAAM/halloween-happy.gif', // GIF 1
+    'https://i.imgur.com/RDSMKvt.png',
+    'https://media.tenor.com/aW_E-EO9smoAAAAM/halloween-happy.gif',
   ];
 
   for (var i = 0; i < snowflakeCount; i++) {
-    var isImageSnowflake = Math.random() < 0.5; // 50% chance to be an image snowflake
-    var size = Math.random() * 25 + 5; // Size between 20px and 50px
+    var isImageSnowflake = Math.random() < 0.5;
+    var size = Math.random() * 25 + 5;
     var snowflake = $('<div class="snowflake"></div>').css({
       left: Math.random() * 100 + 'vw',
-      top: -7.5 + 'vh', // Random starting position above the viewport
+      top: -7.5 + 'vh',
       width: size + 'px',
       height: size + 'px',
       animationDuration: Math.random() * 3 + 2 + 's',
