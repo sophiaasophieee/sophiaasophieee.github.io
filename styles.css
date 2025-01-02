@@ -101,6 +101,24 @@ body {
   display: block;
 }
 
+
+/*profile*/
+
+.inner-box {
+  padding:20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.inner-box::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  z-index: -1;
+}
+
 .profile-box {
   padding: 20px;
   text-align: center;
