@@ -53,13 +53,13 @@ body {
 
 h1 {
   font-size: 24px;
-  color: #ffffff; /* White */
+  color: #000000; /* White */
   margin: 0 0 10px;
 }
 
 p {
   font-size: 16px;
-  color: #cccccc; /* Light gray */
+  color: #000000; /* Light gray */
   margin: 0 0 20px;
 }
 
