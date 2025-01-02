@@ -8,11 +8,11 @@ $(document).ready(function() {
 
   for (var i = 0; i < snowflakeCount; i++) {
     var isImageSnowflake = Math.random() < 0.5; // 50% chance to be an image snowflake
-    var scale = Math.random() * 0.5 + 0.5; // Scale between 0.5 and 1.0
+    var size = Math.random() * 30 + 20; // Size between 20px and 50px
     var snowflake = $('<div class="snowflake"></div>').css({
       left: Math.random() * 100 + 'vw',
-      width: (Math.random() * 5 + 5) * scale + 'px',
-      height: (Math.random() * 5 + 5) * scale + 'px',
+      width: size + 'px',
+      height: size + 'px',
       animationDuration: Math.random() * 3 + 2 + 's',
       animationDelay: Math.random() * 2 + 's',
     });
