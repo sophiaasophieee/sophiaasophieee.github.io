@@ -13,8 +13,8 @@ $(document).ready(function() {
       top: '-' + (Math.random() * 50 + 70) + 'px',
       width: size + 'px',
       height: size + 'px',
-      animationDuration: Math.random() * 4 + 3 + 's',
-      animationDelay: Math.random() * 4 + 's',
+      animationDuration: Math.random() * 6 + 6 + 's',
+      animationDelay: Math.random() * 2 + 's',
     });
 
     if (isImageSnowflake) {
