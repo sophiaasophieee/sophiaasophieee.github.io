@@ -133,6 +133,12 @@ body {
   padding: 7px;
 }
 
+.inner-box {
+  padding: 20px;
+  background-color: #444444;
+  border-radius: 10px;
+}
+
 .profile-picture {
   width: 100px;
   height: 100px;
