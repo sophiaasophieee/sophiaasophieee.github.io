@@ -16,7 +16,7 @@ body {
   text-align: center;
   background-color: #333333; /* Solid dark gray background */
   border-radius: 10px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* Floating shadow effect */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8); /* Floating shadow effect */
   position: relative;
   z-index: 1; /* Ensure it's above the snowflakes */
 }
