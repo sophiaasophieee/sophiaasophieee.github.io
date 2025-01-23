@@ -6,7 +6,7 @@ $(document).ready(function() {
   ];
 
   for (var i = 0; i < snowflakeCount; i++) {
-    var isImageSnowflake = Math.random() < 0.5;
+    var isImageSnowflake = Math.random() < 1;
     var size = Math.random() * 25 + 5;
     var snowflake = $('<div class="snowflake"></div>').css({
       left: Math.random() * 100 + 'vw',
