@@ -13,7 +13,7 @@ body {
 }
 
 .top-nav {
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 10px;
   position: absolute;
   top: 20px;
@@ -114,7 +114,7 @@ body {
 }
 
 .profile-box {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   background-color: #ffffff;
   border-radius: 10px;
@@ -146,7 +146,7 @@ body {
 }
 
 .inner-box {
-  padding: 20px;
+  padding: 10px;
   background-color: #ffffff;
   border-radius: 10px;
 }
