@@ -13,7 +13,7 @@ body {
     color: #FFFFFF;
 }
 .box {
-    width: 22.5%;
+    width: 300px;
     background-color: rgba(206, 230, 245, 0.25);
     backdrop-filter: blur(10px);
     border-radius: 20px;
