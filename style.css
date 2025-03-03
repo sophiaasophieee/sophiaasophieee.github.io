@@ -1,0 +1,28 @@
+canvas { position: fixed; top: 0; left: 0; }
+
+
+body {
+    user-select: none;
+    background-color: #131313;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    color: #FFFFFF;
+}
+.box {
+    width: 22.5%;
+    background-color: rgba(206, 230, 245, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+#particles-js {
+    z-index: -1;
+}
+i {
+    color: #FFFFFF;
+}
