@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", (event) => {
         keyStates[event.key] = true;
 
-        if (!sophiemode && !dvdmode && !matt) {
+        if (!sophiemode && !dvdmode) {
             if (event.key === sophieletters[sophindex]) {
                 sophindex++;
                 if (sophindex === sophieletters.length) {
