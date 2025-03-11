@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const box = document.querySelector(".box");
+    const profilePicture = box.querySelector("img");
+    const nameElements = document.querySelectorAll("h2, title");
     let posX = window.innerWidth / 2 - box.offsetWidth / 2;
     let posY = window.innerHeight / 2 - box.offsetHeight / 2;
     box.style.position = "absolute";
@@ -12,18 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const leap = -15;
     let sophiemode = false;
     let dvdmode = false;
+    let matt = false;
     let dx = 2;
     let dy = 2;
     let isJumping = false;
     const sophieletters = ["s", "o", "p", "h", "i", "e"];
     const dvdletters = ["d", "v", "d"];
+    const mattletters = ["m", "a", "t", "t"];
     let sophindex = 0;
     let indvdex = 0;
+    let mattindex = 0;
 
     document.addEventListener("keydown", (event) => {
         keyStates[event.key] = true;
-    
-        if (!sophiemode && !dvdmode) {
+
+        if (!sophiemode && !dvdmode && !matt) {
             if (event.key === sophieletters[sophindex]) {
                 sophindex++;
                 if (sophindex === sophieletters.length) {
@@ -43,17 +48,59 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 indvdex = 0;
             }
+
+            if (event.key === mattletters[mattindex]) {
+                mattindex++;
+                if (mattindex === mattletters.length) {
+                    mattstart();
+                    mattindex = 0;
+                }
+            } else {
+                mattindex = 0;
+            }
         }
-    
+
         if (event.key === "r" || event.key === "R") {
             resetAll();
         }
     });
-    
 
     document.addEventListener("keyup", (event) => {
         keyStates[event.key] = false;
     });
+
+    function mattstart() {
+        matt = true;
+        profilePicture.src = "matt.png";
+        const favicon = document.querySelector("link[rel='icon']");
+        favicon.href = "matt.png"
+        nameElements.forEach((element) => {
+            element.textContent = element.textContent.replace(/Sophie/g, "Matt");
+        });
+    }
+
+    function resetAll() {
+        posX = window.innerWidth / 2 - box.offsetWidth / 2;
+        posY = window.innerHeight / 2 - box.offsetHeight / 2;
+        box.style.left = `${posX}px`;
+        box.style.top = `${posY}px`;
+        sophiemode = false;
+        dvdmode = false;
+        matt = false;
+        dx = 2;
+        dy = 2;
+        isJumping = false;
+        const favicon = document.querySelector("link[rel='icon']");
+        favicon.href = "sophie.png";
+        profilePicture.src = "sophie.png";
+        nameElements.forEach((element) => {
+            element.textContent = element.textContent.replace(/Matt/g, "Sophie");
+        });
+
+        Object.keys(keyStates).forEach((key) => {
+            keyStates[key] = false;
+        });
+    }
 
     function move() {
         if (dvdmode) {
@@ -96,22 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     move();
-
-    function resetAll() {
-        posX = window.innerWidth / 2 - box.offsetWidth / 2;
-        posY = window.innerHeight / 2 - box.offsetHeight / 2;
-        box.style.left = `${posX}px`;
-        box.style.top = `${posY}px`;
-        sophiemode = false;
-        dvdmode = false;
-        dx = 2;
-        dy = 2;
-        isJumping = false;
-        Object.keys(keyStates).forEach((key) => {
-            keyStates[key] = false;
-        });
-    }
-    
 
     box.addEventListener("mousedown", (event) => {
         let isDragging = true;
