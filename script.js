@@ -48,16 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 indvdex = 0;
             }
-
-            if (event.key === mattletters[mattindex]) {
-                mattindex++;
-                if (mattindex === mattletters.length) {
-                    mattstart();
-                    mattindex = 0;
-                }
-            } else {
+        }
+        if (event.key === mattletters[mattindex]) {
+            mattindex++;
+            if (mattindex === mattletters.length) {
+                mattstart();
                 mattindex = 0;
             }
+        } else {
+            mattindex = 0;
         }
 
         if (event.key === "r" || event.key === "R") {
