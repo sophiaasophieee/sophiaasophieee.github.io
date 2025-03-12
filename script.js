@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const box = document.querySelector(".box");
     const profilePicture = box.querySelector("img");
     const nameElements = document.querySelectorAll("h2, title");
+    const pfpMenu = document.querySelector(".box img:nth-child(1)");
+    const fileMenu = document.querySelector(".box h2:nth-child(2)");
+    const editMenu = document.querySelector(".menu p:nth-child(3)");
     let posX = window.innerWidth / 2 - box.offsetWidth / 2;
     let posY = window.innerHeight / 2 - box.offsetHeight / 2;
     box.style.position = "absolute";
@@ -142,6 +145,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     move();
+
+    pfpMenu.addEventListener("click", () => {
+        if (matt) {
+            matt = false;
+            const favicon = document.querySelector("link[rel='icon']");
+            favicon.href = "sophie.png";
+            profilePicture.src = "sophie.png";
+            nameElements.forEach((element) => {
+                element.textContent = element.textContent.replace(/Matt/g, "Sophie");
+            });
+        } else {
+            mattstart();
+        }
+    });
+
+    fileMenu.addEventListener("click", () => {
+        dvdmode = true;
+        indvdex = 0;
+    });
+
+    editMenu.addEventListener("click", () => {
+        resetAll(); 
+    });
 
     box.addEventListener("mousedown", (event) => {
         let isDragging = true;
