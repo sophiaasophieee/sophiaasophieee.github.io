@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let indvdex = 0;
     let mattindex = 0;
 
+    // Audio setup
+    const wiiAudio = new Audio("wii.mp3");
+    let isFirstClick = true;
+
     document.addEventListener("keydown", (event) => {
         keyStates[event.key] = true;
 
@@ -75,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         matt = true;
         profilePicture.src = "matt.png";
         const favicon = document.querySelector("link[rel='icon']");
-        favicon.href = "matt.png"
+        favicon.href = "matt.png";
         nameElements.forEach((element) => {
             element.textContent = element.textContent.replace(/Sophie/g, "Matt");
         });
@@ -147,6 +151,11 @@ document.addEventListener("DOMContentLoaded", () => {
     move();
 
     pfpMenu.addEventListener("click", () => {
+        if (isFirstClick || wiiAudio.paused) {
+            wiiAudio.play();
+            isFirstClick = false;
+        }
+
         if (matt) {
             matt = false;
             const favicon = document.querySelector("link[rel='icon']");
