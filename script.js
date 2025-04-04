@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let indvdex = 0;
     let mattindex = 0;
 
-    // Audio setup
     const wiiAudio = new Audio("wii.mp3");
     let isFirstClick = true;
 
