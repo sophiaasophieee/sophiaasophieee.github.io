@@ -1,16 +1,25 @@
 canvas { position: fixed; top: 0; left: 0; }
-
+@font-face {
+    font-family: 'Contl';
+    src: url('/assets/contl.ttf') format('truetype');
+    font-weight: lighter;
+}
+  
 
 body {
     user-select: none;
-    background-color: #131313;
+    background-image: url("background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Contl', sans-serif;
+    font-weight: lighter;
     margin: 0;
-    color: #FFFFFF;
+    z-index: -1;
 }
 .box {
     width: 300px;
@@ -25,4 +34,105 @@ body {
 }
 i {
     color: #FFFFFF;
+}
+
+.bar1 {
+    height: 2.5vh;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+}
+.ball {
+    position: relative;
+    border-radius: 50%;
+    top: 0.25vh;
+    height: 12.5vh;
+    width: 25vh;
+    background-color: #7f7f7f;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border-bottom: 0;
+}
+.halfball {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 25vh;
+    top: 0vh;
+    width: 25vh;
+    border-radius: 50%;
+    background-color: #7f7f7f;
+    border-bottom-width: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+.halfball1 {
+    position: absolute;
+    bottom: 6.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 20.5%;
+    height: 12.5vh;
+    width: 25vh;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border-bottom: 0;
+    background-color: #7f7f7f;
+    border: #cfcfcf 5vh solid;
+    border-bottom-width: 0;
+    transform: rotate(180deg);
+    z-index: 0;
+}
+.halfball2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 12.5vh;
+    width: 25vh;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border-bottom: 0;
+    background-color: #7f7f7f;
+    border: #bbbbbb 2.5vh solid;
+    border-bottom-width: 0;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 100vh;
+        margin-bottom: 10vh;
+        margin-right: 2.5vh;
+    }
+}
+.pp69 {
+    position: absolute;        
+    bottom: 20vh;
+    color:black;
+    margin-right: 10vh;
+    img {
+        color: black;
+        height: 40px;
+        margin: 0px 5px
+    }
+    p {
+        font-size: 50px;
+        font-weight: bold;
+    }
+}
+.copyright {
+    position: absolute;        
+    bottom: 5vh;
+    color:black;
+    margin-right: 10vh;
+    i {
+        color: black;
+        margin-right: 2.5vh;
+    }
+    p {
+        font-size: 35px;
+    }
 }
