@@ -2,8 +2,6 @@ let sixPressed = false;
 let ninePressed = false;
 
 function triggerSequence() {
-    const originalCfcfcf = '#cfcfcf';
-    const originalBbbbbb = '#bbbbbb';
     const newCfcfcf = '#ffa500';
     const newBbbbbb = '#53b6d6';
 
@@ -12,12 +10,11 @@ function triggerSequence() {
 
     allElements.forEach(el => {
         const style = getComputedStyle(el);
-        const styles = {
+        originalStyles.push({
             element: el,
-            backgroundColor: style.backgroundColor,
-            borderColor: style.borderColor
-        };
-        originalStyles.push(styles);
+            backgroundColor: el.style.backgroundColor,
+            borderColor: el.style.borderColor
+        });
 
         if (style.backgroundColor.includes('207, 207, 207')) {
             el.style.backgroundColor = newCfcfcf;
@@ -38,12 +35,12 @@ function triggerSequence() {
         overlay.style.position = 'fixed';
         overlay.style.top = 0;
         overlay.style.left = 0;
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
+        overlay.style.width = '100vw';
+        overlay.style.height = '100vh';
         overlay.style.backgroundColor = 'black';
         overlay.style.opacity = '0';
-        overlay.style.zIndex = '9999';
         overlay.style.transition = 'opacity 2.5s ease';
+        overlay.style.zIndex = '9999';
         document.body.appendChild(overlay);
 
         void overlay.offsetHeight;
@@ -71,4 +68,14 @@ document.addEventListener('keydown', e => {
 document.addEventListener('keyup', e => {
     if (e.key === '6') sixPressed = false;
     if (e.key === '9') ninePressed = false;
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const link = document.getElementById('sixtynine');
+    if (link) {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            triggerSequence();
+        });
+    }
 });
