@@ -120,7 +120,7 @@ i {
         margin: 0px 5px
     }
     p {
-        font-size: 5vh;
+        font-size: 3vw;
         font-weight: bold;
     }
 }
@@ -134,7 +134,7 @@ i {
         margin-right: 2.5vh;
     }
     p {
-        font-size: 3.5vh;
+        font-size: 2vw;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -151,6 +151,10 @@ i {
         img {
             width: 75vw;
         }
+        margin-right: 0;
+    }
+    .pp69 {
+        margin-right: 0;
     }
   }
 a {
