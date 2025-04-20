@@ -111,18 +111,16 @@ i {
 }
 .pp69 {
     position: absolute;        
-    bottom: 20vh;
+    bottom: 25vh;
     color:black;
     margin-right: 10vh;
     img {
         color: black;
-        height: 40px;
+        height: 5vh;
         margin: 0px 5px
     }
-    p {
-        font-size: 3vw;
-        font-weight: bold;
-    }
+    font-size: 5vh;
+    font-weight: bold;
 }
 .copyright {
     position: absolute;        
@@ -134,7 +132,7 @@ i {
         margin-right: 2.5vh;
     }
     p {
-        font-size: 2vw;
+        font-size: 2vh;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -150,10 +148,13 @@ i {
     .logo {
         img {
             width: 75vw;
+            margin-right: 0;
         }
-        margin-right: 0;
     }
     .pp69 {
+        margin-right: 0;
+    }
+    .copyright {
         margin-right: 0;
     }
   }
