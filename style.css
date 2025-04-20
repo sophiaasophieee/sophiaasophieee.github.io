@@ -20,7 +20,24 @@ body {
     font-weight: lighter;
     margin: 0;
     z-index: -1;
-    overflow: hidden;
+    overflow-y: none;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100vh;
+    background-image: url("background.png");
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: scrollBackground 60s linear infinite;
+    z-index: -2;
+}
+@keyframes scrollBackground {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 .box {
     width: 300px;
@@ -98,6 +115,9 @@ i {
     background-color: #7f7f7f;
     border: #bbbbbb 2.5vh solid;
     border-bottom-width: 0;
+    img {
+        width: 90%;
+    }
 }
 .logo {
     display: flex;
@@ -132,7 +152,7 @@ i {
         margin-right: 2.5vh;
     }
     p {
-        font-size: 2vh;
+        font-size: 200%;
     }
 }
 @media screen and (max-width: 1000px) {
