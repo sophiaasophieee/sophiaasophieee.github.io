@@ -1,7 +1,7 @@
 let sixPressed = false;
 let ninePressed = false;
 let triggered = false;
-document.getElementById("after").style.display = "none";
+let matt = false;
 
 function triggerSequence() {
     if (sessionStorage.getItem('sequenceTriggered') === 'true') {
@@ -53,19 +53,30 @@ function triggerSequence() {
 
         overlay.style.opacity = '1';
         setTimeout(() => {
-            document.getElementById("before").style.display = "none";
-            document.getElementById("after").style.display = "flex";
+            const beforeEl = document.getElementById("before");
+            const afterEl = document.getElementById("after");
+
+            if (beforeEl && afterEl) {
+                beforeEl.classList.add("hidden");
+                afterEl.classList.add("active");
+            }
+
             originalStyles.forEach(({ element, backgroundColor, borderColor }) => {
                 element.style.backgroundColor = backgroundColor;
                 element.style.borderColor = borderColor;
             });
-            overlay.remove();
-            
-            sessionStorage.setItem('sequenceTriggered', 'true');
-        }, 2500);
 
+            overlay.remove();
+            sessionStorage.setItem('sequenceTriggered', 'true');
+
+            const wiiAudio = document.getElementById("wiiAudio");
+            if (wiiAudio) {
+                wiiAudio.play();
+            }
+        }, 2500);
     }, 500);
 }
+
 
 document.addEventListener('keydown', e => {
     if (e.key === '6') sixPressed = true;
@@ -80,7 +91,7 @@ document.addEventListener('keyup', e => {
     if (e.key === '9') ninePressed = false;
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     sessionStorage.clear();
 
     const link = document.getElementById('sixtynine');
@@ -88,6 +99,58 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', e => {
             e.preventDefault();
             triggerSequence();
+        });
+    }
+
+    document.querySelectorAll(".height").forEach(el => {
+        const heightValue = parseInt(el.id, 10);
+        if (!isNaN(heightValue)) {
+            el.style.height = heightValue + "vh";
+        }
+    });
+
+    const profilePictures = document.querySelectorAll(".profile");
+    const whitesoapphia = document.querySelectorAll(".wh");
+    const soapphias = document.querySelectorAll(".soap");
+    const nameElements = document.querySelectorAll("h2, title");
+
+    function mattstart() {
+        const flashOverlay = document.getElementById('trol');
+        flashOverlay.style.display = 'block';
+        setTimeout(() => {
+            flashOverlay.style.display = 'none';
+            matt = true;
+            profilePictures.forEach(img => img.src = "website/matt.png");
+            whitesoapphia.forEach(img => img.src = "website/whmattphia.png");
+            soapphias.forEach(img => img.src = "website/mattphia.png");
+    
+            const favicon = document.querySelector("link[rel='icon']");
+            if (favicon) favicon.href = "website/matt.png";
+    
+            nameElements.forEach(element => {
+                element.textContent = element.textContent.replace(/Sophie/g, "Matt");
+            });
+        }, 500);
+    }
+
+    function resetMatt() {
+        matt = false;
+        profilePictures.forEach(img => img.src = "website/sophie.png");
+        whitesoapphia.forEach(img => img.src = "website/whsoapphia.png");
+        soapphias.forEach(img => img.src = "website/soapphia.png");
+
+        const favicon = document.querySelector("link[rel='icon']");
+        if (favicon) favicon.href = "website/sophie.png";
+
+        nameElements.forEach(element => {
+            element.textContent = element.textContent.replace(/Matt/g, "Sophie");
+        });
+    }
+
+    const mattButton = document.getElementById("matt");
+    if (mattButton) {
+        mattButton.addEventListener("click", () => {
+            matt ? resetMatt() : mattstart();
         });
     }
 });
